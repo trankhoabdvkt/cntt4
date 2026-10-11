@@ -162,11 +162,11 @@ Mỗi mô hình được huấn luyện trên tập Train với một lưới si
 
 **Mô hình được chọn: Random Forest.** Mô hình này có F1 cao nhất trên tập Validation (1.0), và việc chọn được thực hiện trước khi nhìn tập Test. Trên tập Test, ma trận nhầm lẫn là TN = 540, FP = 2, **FN = 0**, TP = 165: mô hình không bỏ sót người có nguy cơ nào, chỉ báo nhầm 2 trường hợp. Gradient Boosting đạt kết quả tương đương (khác 2 bản ghi), nên cũng là lựa chọn tốt.
 
-![So sánh mô hình](trandangkhoa_CNTT4/outputs/03_so_sanh_mo_hinh.png)
+![So sánh mô hình](TRANDANGKHOA_CNTT4/outputs/03_so_sanh_mo_hinh.png)
 
-![Ma trận nhầm lẫn](trandangkhoa_CNTT4/outputs/04_ma_tran_nham_lan.png)
+![Ma trận nhầm lẫn](TRANDANGKHOA_CNTT4/outputs/04_ma_tran_nham_lan.png)
 
-![Đường cong ROC](trandangkhoa_CNTT4/outputs/05_roc.png)
+![Đường cong ROC](TRANDANGKHOA_CNTT4/outputs/05_roc.png)
 
 **Nhận xét:**
 
@@ -174,7 +174,7 @@ Mỗi mô hình được huấn luyện trên tập Train với một lưới si
 - Các mô hình cây (RF, GB) vượt trội vì nhãn được xác định bằng **ngưỡng**, mà cây quyết định học ngưỡng rất tự nhiên.
 - **Lý do độ chính xác gần 100%:** kiểm tra cho thấy nhãn trong dữ liệu khớp **100%** với tiêu chuẩn chẩn đoán của Hiệp hội Đái tháo đường Hoa Kỳ (ADA): *Glucose đói ≥ 7.0 mmol/L hoặc HbA1C ≥ 6.5%*. Như vậy mô hình đã "học lại" đúng tiêu chuẩn y khoa từ dữ liệu. Glucose chiếm khoảng 83% mức độ quan trọng (hình dưới).
 
-![Độ quan trọng đặc trưng](trandangkhoa_CNTT4/outputs/06_do_quan_trong.png)
+![Độ quan trọng đặc trưng](TRANDANGKHOA_CNTT4/outputs/06_do_quan_trong.png)
 
 - **Hạn chế:** mô hình chưa dự báo được nguy cơ *trước khi* đường huyết vượt ngưỡng. Muốn làm được điều đó cần dữ liệu theo dõi theo thời gian và các yếu tố như BMI, huyết áp, tiền sử gia đình. Ngoài ra, chỉ khoảng 170 bản ghi có HbA1C đo thật, nên mô hình học chỉ số này còn yếu.
 
